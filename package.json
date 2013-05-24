@@ -1,6 +1,6 @@
 {
   "author": "Chris Wacek <cwacek@gmail.com>",
-  "name": "bigint_node",
+  "name": "bigint-node",
   "tags": ["integer", "biginteger", "big integer", "precision"],
   "description": "Based off of Leemon Baird's pure javascript BigInteger, provide a big integer library to Node.JS",
   "version": "1.0.1",
@@ -9,10 +9,10 @@
     "type": "git",
     "url": "git://github.com/cwacek/bigint_node"
   },
-  "main": "lib/bigint.js"
+  "main": "lib/bigint.js",
   "engines": {
     "node": "*"
   },
   "dependencies": {},
-  "devDependencies": {"mocha","should","coffee-script","jscoverage"}
+  "devDependencies": {"mocha": "*","should": "*","coffee-script": "*","jscoverage": "*"}
 }

@@ -18,9 +18,7 @@ smaller = BigInt.FromInt(124442255)
 large.modEquals(smaller)
 
 console.log large.toStr(10)
-# 
-
-
+# 82641132
 ```
 
 ### Test

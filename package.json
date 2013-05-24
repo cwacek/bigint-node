@@ -9,10 +9,7 @@
     "type": "git",
     "url": "git://github.com/cwacek/bigint_node"
   },
-  "scripts": {
-      "prepublish":   "coffee --bare --compile --lint --output lib/ src/*.coffee",
-  },
-  "main": "bigint.js",
+  "main": "src/bigint.js"
   "engines": {
     "node": "*"
   },

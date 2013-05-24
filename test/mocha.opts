@@ -1,1 +1,1 @@
---reporter spec --compilers coffee:coffee-script -b
+--reporter spec --compilers coffee:coffee-script

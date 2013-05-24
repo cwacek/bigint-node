@@ -9,7 +9,7 @@ the original library have been removed.
 
 ### Usage
 
-```
+```coffeescript
 BigInt = require 'bigint-node'
 
 large = BigInt.ParseFromString("1232223582030304828202",10)

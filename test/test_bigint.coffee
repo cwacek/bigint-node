@@ -1,4 +1,4 @@
-BigInt = require '../src/bigint'
+BigInt = require '../lib/bigint'
 should = require 'should'
 
 describe 'BigInt', ->

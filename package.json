@@ -9,7 +9,7 @@
     "type": "git",
     "url": "git://github.com/cwacek/bigint_node"
   },
-  "main": "src/bigint.js"
+  "main": "lib/bigint.js"
   "engines": {
     "node": "*"
   },

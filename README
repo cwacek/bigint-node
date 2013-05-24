@@ -1,0 +1,10 @@
+BigInt Node
+===========
+
+This is a Node.JS port of the pure Javascript Big Integer library created by [Leemon Baird](http://www.leemon.com).
+
+It doesn't export all functions as of yet (mostly the crypto related ones are missing ), but exports most of those
+needed to simply use Big Integers. Where possible, this wrapper does its best to ensure that unsafe functions in
+the original library have been removed.
+
+

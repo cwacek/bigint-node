@@ -14,5 +14,5 @@
     "node": "*"
   },
   "dependencies": {},
-  "devDependencies": {"mocha","should","coffee-script"}
+  "devDependencies": {"mocha","should","coffee-script","jscoverage"}
 }

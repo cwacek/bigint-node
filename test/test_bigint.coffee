@@ -49,13 +49,13 @@ describe 'BigInt', ->
       for [name,base,test,expected] in [['hex',16,'51EADE',5368542],['base32',32,'4EUIF',4684367]]
         do (name, base,test,expected)->
           it "should parse #{name}", ()->
-            BigInt.ParseFromString("#{test}",base,1).equals_i(expected).should.be.ok
+            BigInt.ParseFromString("#{test}",base).equals_i(expected).should.be.ok
 
       it 'should handle very large numbers', ->
         # This is a carefully written test case. It's testing
         # against a power of 10 intentionally, since those are the only
         # thing we can guarantee has precision.
-        bi = BigInt.ParseFromString("100000000000000000000000000000000",10,1)
+        bi = BigInt.ParseFromString("100000000000000000000000000000000",10)
         parseInt(bi.toStr(10)).should.eql 1e+32
 
     describe '#toStr', ->
@@ -102,8 +102,8 @@ describe 'BigInt', ->
         i20.toInt().should.equal 400
 
       it 'should expand the array if necessary', ->
-        n1 = BigInt.ParseFromString("123809128309810928",10,0)
-        n2 = BigInt.ParseFromString("123809128309810928",10,0)
+        n1 = BigInt.ParseFromString("123809128309810928",10)
+        n2 = BigInt.ParseFromString("123809128309810928",10)
         n1.toStr(10).should.eql "123809128309810928"
         n2.toStr(10).should.eql "123809128309810928"
 
@@ -122,16 +122,16 @@ describe 'BigInt', ->
         vars.zero.addEquals(vars.one).toStr(10).should.eql '1'
 
       it 'should expand the array if necessary',->
-        large = BigInt.ParseFromString("12039809348209849280398409283048",10,0)
+        large = BigInt.ParseFromString("12039809348209849280398409283048",10)
 
         vars.one.addEquals(large)
-        vars.one.eql(BigInt.ParseFromString("12039809348209849280398409283049",10,0)).should.be.true
+        vars.one.eql(BigInt.ParseFromString("12039809348209849280398409283049",10)).should.be.true
 
     describe '#modEquals',->
       describe 'very large modulo',->
         numbers = ["3754675054686200000", "2132410864723480000", "545263645780520000",
                    "3784049960705640000", "4765570386023120000", "1141154599711940000"]
-        mod = BigInt.ParseFromString('11529215046068479',10,0)
+        mod = BigInt.ParseFromString('11529215046068479',10)
 
         for n,i in numbers
           it "should correctly compute #{n} % #{mod.toStr(10)}",->
@@ -139,7 +139,7 @@ describe 'BigInt', ->
           expected = ["7680164713944325", "11035296246879864", "3390538615301487",
                       "2467425595178888", "4004571996838173", "11291525197229058"]
 
-          BigInt.ParseFromString(n,10,0).modEquals(mod).toStr(10).should.eql expected[i]
+          BigInt.ParseFromString(n,10).modEquals(mod).toStr(10).should.eql expected[i]
 
       it 'should throw an error if mod 0 is requested',->
         (()->

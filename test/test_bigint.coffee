@@ -80,7 +80,7 @@ describe 'BigInt', ->
       it 'should return an integer',->
         t = BigInt.FromInt(7)
         x = t.toInt()
-        x.should.be.a 'number'
+        x.should.be.an.instanceof Number
         x.should.eql 7
 
       it "should throw an error if the integer is more than #{BigInt.bpe} bits",->

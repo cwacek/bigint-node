@@ -1,10 +1,12 @@
 
 .PHONY: test  coverage
-	
+
+MOCHA="node_modules/.bin/mocha --compilers coffee:coffee-script/register"
+
 test:
-	mocha
+	$(MOCHA)
 
 coverage:
 	jscoverage lib lib-cov
-	BIGINT_COV=1 mocha --reporter html-cov > test/coverage.html
+	BIGINT_COV=1 $(MOCHA) --reporter html-cov > test/coverage.html
 	-rm -r lib-cov

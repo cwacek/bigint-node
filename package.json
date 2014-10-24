@@ -3,7 +3,7 @@
   "name": "bigint-node",
   "tags": ["integer", "biginteger", "big integer", "precision"],
   "description": "Based off of Leemon Baird's pure javascript BigInteger, provide a big integer library to Node.JS",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/cwacek/bigint-node",
   "repository": {
     "type": "git",

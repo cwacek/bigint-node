@@ -13,6 +13,9 @@
   "engines": {
     "node": "*"
   },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --compilers coffee:coffee-script/register"
+  },
   "dependencies": {},
   "devDependencies": {"mocha": "*","should": "*","coffee-script": "*","jscoverage": "*"}
 }
